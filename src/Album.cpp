@@ -4,14 +4,13 @@
 
 #include "Album.hpp"
 
-Album::Album(int id, const std::string& tytul, int rokwydania, const std::string& format, const std::string& autor,
+Album::Album(int id, const std::string& tytul, int rokWydania, const std::string& format, const std::string& autor,
 const std::string& gatunek, const std::string& wydawca) : Pozycja(id, tytul, rokWydania), format(format), autor(autor)
 {
     if(format != "LP" && format != "CD" && format != "Kaseta" && format != "8-Track" && format != "Digital"){
-        return std::invalid_argument("Niepoprawny format");
+        throw std::invalid_argument("Niepoprawny format");
     }
 }
-
 
 std::string Album::opis() const {return getTitle() + " (" + std::to_string(getRelease()) + ")";}
 std::string Album::getTyp() const {return "Album";}

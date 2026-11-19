@@ -6,6 +6,7 @@
 #define MDK_ZPO2627_POZYCJA_HPP
 
 #include <string>
+#include <stdexcept>
 
 class Pozycja
 {
@@ -15,7 +16,7 @@ private:
     int rokWydania;
     bool wypozyczona;
 public:
-    Pozycja(int id, const std::string& tytul, int rokwydania);
+    Pozycja(int id, const std::string& tytul, int rokWydania);
 
     virtual ~Pozycja() = default;
 

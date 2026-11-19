@@ -14,8 +14,8 @@ genre(genre), producent(producent), region(region), mp(mp), ageRating(ageRating)
 	}
 }
 
-std::string opis() const {return getTitle() + " (" + std::to_string(getRelease()) + ")";}
-std::string getTyp() const {return "Gra";}
+std::string Gra::opis() const {return getTitle() + " (" + std::to_string(getRelease()) + ")";}
+std::string Gra::getTyp() const {return "Gra";}
 
 const std::string& Gra::getPlatforma() const {return platforma;}
 const std::string& Gra::getProducent() const {return producent;}

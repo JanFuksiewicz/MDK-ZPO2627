@@ -5,9 +5,9 @@
 #include "Film.hpp"
 
 Film::Film(int id, const std::string& tytul, int rokwydania, const std::string& rezyser, const std::string& genre,
-const std::string& format) : Pozycja(int, tytul, rokWydania), rezyser(rezyser), genre(genre), format(format){
+const std::string& format) : Pozycja(id, tytul, rokwydania), rezyser(rezyser), genre(genre), format(format){
     if(format != "VCD" && format != "DVD" && format != "Blu-ray" && format != "Digital" && format != "VHS" && format != "Betamax"){
-        return std::invalid_argument("Błędny format");
+        throw std::invalid_argument("Błędny format");
     }
 }
 
